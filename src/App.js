@@ -15,7 +15,7 @@ class Quote extends React.Component {
     /* placeholder */
     constructor(props) {
         super(props);
-        this.state = {author: "Rick Osborne", quote: "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."}
+        this.state = {quoteAuthor: "Rick Osborne", quote: "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."}
     }
     /* actually render things */
     render() {
