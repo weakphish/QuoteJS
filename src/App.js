@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+/* this function accesses the API and returns a json */
 function fetchQuote() {
     return fetch('http://quotes.stormconsultancy.co.uk/random.json') // fetch a response from the api
         .then((response) => { 
@@ -11,10 +12,12 @@ function fetchQuote() {
 
 /* component for the quote */
 class Quote extends React.Component {
+    /* placeholder */
     constructor(props) {
         super(props);
-        this.state = {author: "", quote: ""}
+        this.state = {author: "Rick Osborne", quote: "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."}
     }
+    /* actually render things */
     render() {
         return (
         <div>
@@ -23,12 +26,14 @@ class Quote extends React.Component {
         </div>
         );
     }
+    /* start a timer */
     componentDidMount() {
         this.timerID = setInterval(
           () => this.tick(),
           20000
         );
     }
+    /* idk what this does but facebook told me to do it */
     componentWillUnmount() {
         clearInterval(this.timerID);
     }
@@ -40,13 +45,11 @@ class Quote extends React.Component {
             quoteAuthor: response.author,
             quote: response.quote
         });
-    }
-    
+    }   
 }
 
+/* the main meat */
 function App() {
-
-
     /* return a JSX formatted component stuff */
     return (
         <div className = "Main">
