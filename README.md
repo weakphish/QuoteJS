@@ -3,4 +3,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## What this is
 Learning React one Google search at a time.
 <br />
+<br />
 ![Screenshot](https://raw.githubusercontent.com/john123allison/QuoteJS/master/public/screenshot.png)
