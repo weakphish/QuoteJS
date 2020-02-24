@@ -12,10 +12,10 @@ export default class Quote extends React.Component {
     /* actually render things */
     render() {
         return (
-            <div className="main">
-                <h1>{this.state.quoteAuthor}</h1>
-                <p>{this.state.quote}</p>
-            </div>
+                <div className="main">
+                    <h1>{this.state.quoteAuthor}</h1>
+                    <p>{this.state.quote}</p>
+                </div>
         );
     }
     /* start a timer */
