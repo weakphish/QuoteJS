@@ -1,7 +1,6 @@
 import React from 'react';
 import fetchQuote from './Fetch'
 
-import styled from 'styled-components'
 
 /* component for the quote */
 export default class Quote extends React.Component {
@@ -13,7 +12,7 @@ export default class Quote extends React.Component {
     /* actually render things */
     render() {
         return (
-            <div className="wrapper">
+            <div className="main">
                 <h1>{this.state.quoteAuthor}</h1>
                 <p>{this.state.quote}</p>
             </div>

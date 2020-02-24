@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import fetchQuote from './components/Fetch'
 import Quote from './components/Quotes'
+import Footer from './components/Footer'
 
 /* the main meat */
 function App() {
@@ -10,6 +10,7 @@ function App() {
     return (
         <div className = "Main">
             <Quote />
+            <Footer />
         </div>
     );
 }
