@@ -17,7 +17,7 @@ a {
     color: #6002EE;
     padding: 3px;
     transition: background-color .5s;
-    transition: color .5s;
+    transition-duration: .4s;
 }
 
 a:hover {
@@ -50,4 +50,24 @@ a:hover {
     width: 50%;
     min-width: 500px;
     margin: auto;
+}
+
+.button {
+    text-align: center;
+}
+
+#button {
+    border-color: #6002EE;
+    color: #6002EE;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: .4s;
+}
+
+#button:hover {
+    color: #FFFFFF;
+    background-color: #6002EE;
 }
