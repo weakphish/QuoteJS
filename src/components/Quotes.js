@@ -1,8 +1,12 @@
 import React from 'react';
 import fetchQuote from './Fetch'
+import {
+  TwitterShareButton,
+  TwitterIcon
+} from "react-share";
 
 
-/* component for the quote */
+/* component for the quotes */
 export default class Quote extends React.Component {
     /* placeholder */
     constructor(props) {
@@ -15,13 +19,23 @@ export default class Quote extends React.Component {
     /* actually render things */
     render() {
         return (
-                <div className="main">
+            <div className="main">
+                <div className="quotes">
                     <h1>{this.state.quoteAuthor}</h1>
                     <p>{this.state.quote}</p>
                     <div className="button">
                         <button id="button" onClick={this.update}>New quote</button>
                     </div>
                 </div>
+                <div className="footer">
+                    <p>Made by <a href="https://john123allison.github.io">John Allison</a></p>
+                </div>
+                <div className="share">
+                    <TwitterShareButton url={"localhost:3000"} title={this.state.quote} via=" https://programmerquotes.netlify.com/">
+                        <TwitterIcon size={32} round={true} />
+                    </TwitterShareButton>
+                </div>
+            </div>
         );
     }
     
@@ -31,7 +45,14 @@ export default class Quote extends React.Component {
         console.log(response);
         this.setState({
             quoteAuthor: response.author,
-            quote: response.quote
+            quote: response.en
         });
     };   
 }
+
+/* https://www.npmjs.com/package/react-share
+Twitter share button args:
+title (string): Title of the shared page
+via: (string)
+hashtags (array): Hashtags
+*/

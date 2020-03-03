@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 
 import Quote from './components/Quotes'
-import Footer from './components/Footer'
-import Share from './components/Share'
 
 /* the main meat */
 function App() {
@@ -11,8 +9,6 @@ function App() {
     return (
         <div className = "Main">
             <Quote />
-            <Footer />
-            <Share />
         </div>
     );
 }

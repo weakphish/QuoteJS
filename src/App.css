@@ -1,4 +1,4 @@
-.main {
+.quotes {
     font-size: 28px;
     width: 50%;
     min-width: 500px;
@@ -25,14 +25,14 @@ a:hover {
     background-color: #6002EE;
 }
 
-.main p {
+.quotes p {
     font-family: 'Lekton';
     color: #FFFFFF;
     background-color: #6002EE;
     padding: 10px;
 }
 
-.main h1 {
+.quotes h1 {
     font-weight: bold;
     font-family: 'Montserrat';
     background-color: #FFFFFF;
