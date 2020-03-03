@@ -3,6 +3,7 @@
 # Currently testing and deployed to https://programmerquotes.netlify.com/ - HOWEVER, not functional as the API being accessed doesn't play nice with HTTPS.
 
 ## What this is
+### Currently testing deployment with Netlify - currently trying to devise a workaround to an API incompatibility.
 Learning React one Google search at a time.
 <br />
 To check this out, clone the repo, verify you have NodeJS installed and run ```npm install``` and ```npm start``` in the repo directory.
