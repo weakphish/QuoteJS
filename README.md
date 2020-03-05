@@ -1,6 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3c50f0dc-645a-472e-9ae7-cac5d178e091/deploy-status)](https://app.netlify.com/sites/programmerquotes/deploys)
 
-### https://programmerquotes.netlify.com/
+
+### https://programmer-quotes.herokuapp.com/
 
 ## What this is
 Learning React one Google search at a time.
