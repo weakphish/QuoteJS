@@ -1,10 +1,5 @@
 import React from 'react';
 import fetchQuote from './Fetch'
-import {
-  TwitterShareButton,
-  TwitterIcon
-} from "react-share";
-
 
 /* component for the quotes */
 export default class Quote extends React.Component {
@@ -19,21 +14,11 @@ export default class Quote extends React.Component {
     /* actually render things */
     render() {
         return (
-            <div className="main">
-                <div className="quotes">
-                    <h1>{this.state.quoteAuthor}</h1>
-                    <p>{this.state.quote}</p>
-                    <div className="button">
-                        <button id="button" onClick={this.update}>New quote</button>
-                    </div>
-                </div>
-                <div className="footer">
-                    <p>Made by <a href="https://john123allison.github.io">John Allison</a></p>
-                </div>
-                <div className="share">
-                    <TwitterShareButton url={"localhost:3000"} title={this.state.quote} via=" https://programmerquotes.netlify.com/">
-                        <TwitterIcon size={32} round={true} />
-                    </TwitterShareButton>
+            <div className="quotes">
+                <h1>{this.state.quoteAuthor}</h1>
+                <p>{this.state.quote}</p>
+                <div className="button">
+                    <button id="button" onClick={this.update}>New quote</button>
                 </div>
             </div>
         );
