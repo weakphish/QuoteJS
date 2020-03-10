@@ -1,43 +1,36 @@
-import React from 'react';
-import fetchQuote from './Fetch'
+import React, { useEffect, useState } from 'react';
+import fetchQuote from './Fetch';
 
-/* component for the quotes */
-export default class Quote extends React.Component {
-    /* placeholder */
-    constructor(props) {
-        super(props);
-        this.state = {
-            quoteAuthor: "Rick Osborne", 
-            quote: "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."
-        }
-    }
-    /* actually render things */
-    render() {
-        return (
-            <div className="quotes">
-                <h1>{this.state.quoteAuthor}</h1>
-                <p>{this.state.quote}</p>
-                <div className="button">
-                    <button id="button" onClick={this.update}>New quote</button>
-                </div>
-            </div>
-        );
+/* https://reactjs.org/docs/hooks-overview.html 
+ * https://stackoverflow.com/questions/60610256/what-is-the-proper-way-to-fetch-json-in-react-with-hooks
+ */
+
+export default function Quote() {
+    const [author, setAuthor] = useState("Rick Osborne");
+    const [quote, setQuote] = useState(
+        "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."
+    );
+
+    const fetchMyAPI = async () => {
+        let json = await fetchQuote();
+        setAuthor(json.author);
+        setQuote(json.en);
+        console.log(json);
     }
     
-    /* async fetch the quotes and reassign the variables to them once processed */
-    update = async() => {
-        let response = await fetchQuote();
-        console.log(response);
-        this.setState({
-            quoteAuthor: response.author,
-            quote: response.en
-        });
-    };   
+    useEffect(() => {
+        fetchMyAPI();
+       }, []);
+    
+    return (
+        <div className="quotes">
+            <h1>{author}</h1>
+            <p>{quote}</p>
+            <div className="button">
+                <button id="button" onClick={fetchMyAPI}>
+                    New quote
+                </button>
+            </div>
+        </div>
+    )
 }
-
-/* https://www.npmjs.com/package/react-share
-Twitter share button args:
-title (string): Title of the shared page
-via: (string)
-hashtags (array): Hashtags
-*/
